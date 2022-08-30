@@ -10,23 +10,26 @@ CREATE TABLE
         username VARCHAR(100) NOT NULL,
         imgUrl TEXT,
         userType VARCHAR(100) DEFAULT('user')
-    )
+    );
+
 CREATE TABLE
     books(
         id SERIAL PRIMARY KEY,
         book_name VARCHAR(100) NOT NULL,
         imgUrl TEXT,
-        price FLOAT DEFAULT('user'),
+        price FLOAT ,
         details TEXT
-    )
+    );
+
 CREATE TABLE
     carts(
         id SERIAL PRIMARY KEY,
         userId INT,
         bookId INT,
         foreign key (userId) references users(id),
-        foreign key (bookId) references books(id),
-    )
+        foreign key (bookId) references books(id)
+    );
+
 insert into
     users(
         email,
@@ -41,13 +44,14 @@ VALUES (
         'hussam',
         'img',
         'admin'
-    ) (
+    ), (
         'ahmed@hotmil.com',
         '123456',
         'ahmed',
         'img',
         'user'
-    )
+    );
+
 insert into
     books(
         book_name,
@@ -57,6 +61,6 @@ insert into
     )
 VALUES ('GOT', 'img', 50, 'deatils');
 
-insert into carts(userId, bookId,) VALUES (1, 1)(2, 1);
+insert into carts(userId, bookId) VALUES (1, 1),(2, 1);
 
 COMMIT;
