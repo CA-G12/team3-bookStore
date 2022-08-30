@@ -1,11 +1,10 @@
 const { addUserQueries } = require("../database/queries")
 
 
-const addUserController = (req, res) => {
-    console.log(req.body)
-    const {email , password , username, imgurl , usertype} = req.body
-    addUserQueries({email , password , username, imgurl , usertype}).then(data => {
-        res.send(data)
+const addUserController = ({email , hash , username, imgurl , usertype}) => {
+    
+    addUserQueries({email , hash , username, imgurl , usertype}).then(data => {
+        console.log(data);
     })
 }
 
