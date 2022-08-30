@@ -2,7 +2,6 @@ const { Pool } = require("pg");
 require("dotenv").config();
 
 let DATABASE_URL = "";
-console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === "development") {
   DATABASE_URL = process.env.DB_DEVELOPMENT;
