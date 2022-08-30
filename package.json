@@ -21,6 +21,7 @@
   "homepage": "https://github.com/CA-G12/team3-bookStore#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
@@ -29,9 +30,11 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.8.0"
   },
-
   "devDependencies": {
-    "nodemon": "^2.0.19",
-    "jest": "^29.0.1"
+    "jest": "^29.0.1",
+    "nodemon": "^2.0.19"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
