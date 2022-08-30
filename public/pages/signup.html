@@ -13,6 +13,30 @@
 </head>
 
 <body>
+
+    <form action="/addUser" method="post">
+        <label for="username">
+            username
+            <input type="text" id="username" name="username" >
+        </label>
+        <label for="email">
+            email
+            <input type="email" id="email" name="email" >
+        </label>
+        <label for="password">
+            password
+            <input type="password" id="password" name="password" >
+        </label>
+        <label for="userType">
+            user type
+            <input type="text" id="userType" name="usertype" >
+        </label>
+        <label for="image">
+            image url
+            <input type="text" id="image" name="imgurl" >
+        </label>
+        <button type="submit" >submit</button>
+    </form>
     <script src="../js/clientSideValidation.js"></script>
     <script src="../js/dom.js"></script>
 </body>
