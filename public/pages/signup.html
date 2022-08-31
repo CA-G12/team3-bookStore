@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../style/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../style/singUp.css" />
+    <link rel="stylesheet" href="../style/main.css" />
     <title>signup</title>
-</head>
+  </head>
 
-<body>
-
-    <form action="/addUser" method="post">
-        <label for="username">
-            username
-            <input type="text" id="username" name="username" >
-        </label>
-        <label for="email">
-            email
-            <input type="email" id="email" name="email" >
-        </label>
-        <label for="password">
-            password
-            <input type="password" id="password" name="password" >
-        </label>
-        <label for="userType">
-            user type
-            <input type="text" id="userType" name="usertype" >
-        </label>
-        <label for="image">
-            image url
-            <input type="text" id="image" name="imgurl" >
-        </label>
-        <button type="submit" >submit</button>
+  <body>
+    <div class="login-box">
+      <form action="/addUser" method="post">
+        <div class="user-box">
+          <input type="text" id="username" name="username" />
+          <label>Username</label>
+        </div>
+        <div class="user-box">
+          <input type="email" name="email" autocomplete="off"/>
+          <label>Email</label>
+        </div>
+        <div class="user-box">
+          <input type="password" id="password" name="password" />
+          <label>Password</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="userType" name="usertype" />
+          <label>User Type</label>
+        </div>
+        <div class="user-box">
+          <input type="text" id="image" name="imgurl" />
+          <label>Image Url</label>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+        <br />
     </form>
+    <form>
+        <div class="home_login">
+            <a href="../index.html">
+                <button  class="home_loginbnt">Home</button>
+            </a>
+            <a href="./login.html">
+            <button  class="home_loginbnt">Login</button>
+        </a>
+        </div>
+    </form>
+    </div>
     <script src="../js/clientSideValidation.js"></script>
     <script src="../js/dom.js"></script>
-</body>
-
+  </body>
 </html>
