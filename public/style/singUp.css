@@ -191,7 +191,9 @@ html {
     justify-content: center;
     justify-content: space-between;
   }
-
+.errormsg{
+    color: red;
+}
 
   .login-box form .home_loginbnt {
     border-radius: 5px;
