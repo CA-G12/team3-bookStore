@@ -11,6 +11,6 @@ router.get("/checkLoggedUser", checkLoggedUser);
 router.get("/logout", logout);
 router.post("/addUser", hashController);
 router.post("/login", verifyLogin);
-router.get('/cart/:id',getCartController)
+router.get('/cart',getCartController)
 
 module.exports = router;

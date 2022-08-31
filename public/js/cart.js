@@ -1,1 +1,1 @@
-fetch('/cart/:1').then(data => data.json()).then(result => console.log(result))
+fetch('/cart').then(data => data.json()).then(result => console.log(result))
