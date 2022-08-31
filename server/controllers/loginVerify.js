@@ -15,7 +15,7 @@ const verifyLogin = (req, res) => {
   
   const value = schema.validate(req.body);
   if(value.error){
-    res.send(value.error.details[0].message);
+    res.send({ msg: value.error.details[0].message });
   } else {
     const inputPassword = req.body["password"];
   checkLogin(req.body).then((data) => {
@@ -24,10 +24,10 @@ const verifyLogin = (req, res) => {
       bcrypt.compare(inputPassword, user.password, (err, result) => {
         if (err) {
           console.log(err);
-          res.sendStatus(500);
+          res.send( { msg : 500 });
         } else {
           if (!result) {
-            res.send("wrong password");
+            res.send({ msg: "wrong password" });
           } else {
             jwt.sign(
               user,
@@ -36,9 +36,9 @@ const verifyLogin = (req, res) => {
               (err, encoded) => {
                 if (err) {
                   console.log(err);
-                  res.sendStatus(500);
+                  res.send( { msg : 500 });
                 } else {
-                  res.cookie("loggedUser", encoded).redirect("/");
+                  res.cookie("loggedUser", encoded).send({sucss: "success"});
                 }
               }
             );

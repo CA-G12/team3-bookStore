@@ -15,7 +15,7 @@
 
 <body>
     <header></header>
-    <form method="post" action="/login">
+    <form method="post" action="/login" class="form">
        
         <div class="container">
             <div class="header">
@@ -25,8 +25,8 @@
                 *Click on the input boxes
             </div>
 
-        <input type="email" name="email" class="text" onfocus="handle2()" class="inc2" placeholder="Email">
-        <input type="password" name="password" class="pass" onfocus="handle1()" class="inc1" placeholder="Password">
+        <input type="email" name="email" class="text" onfocus="handle2()" class="inc2" placeholder="Email" id="email">
+        <input type="password" name="password" class="pass" onfocus="handle1()" class="inc1" placeholder="Password" id="password">
             <button class="btn">Log In</button>
         <svg
           width="390"
@@ -51,10 +51,13 @@
         
     </form>
     <a href="../pages/signup.html" class="signupBtn btn"><label style="color: black;">Dont Have Account? </label>sign up</a>
+    <span class="spanText"></span>
     
+    <script src="../js/loginVail.js"></script>
     <script src="../js/clientSideValidation.js"></script>
     <script src="../js/dom.js"></script>
     <script src="../js/loginPage.js"></script>
+    
 </body>
 
 </html>
