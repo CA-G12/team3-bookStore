@@ -6,6 +6,8 @@ const {
   checkLoggedUser,
   logout,
   getCartController,
+  addBooksFromForm,
+  addBooksRouter,
   getAllBooks,
   addToCart,
   deleteCartItem,
@@ -17,6 +19,9 @@ router.get("/checkLoggedUser", checkLoggedUser);
 router.get("/logout", logout);
 router.post("/addUser", hashController);
 router.post("/login", verifyLogin);
+router.post("/addBooks",addBooksFromForm);
+router.get("/addBooks",addBooksRouter);
+
 // router.post("/loginPage", (req, res) => {
 //   res.sendFile(join(__dirname, "..", "..", "public", "pages", "login.html"));
 // });

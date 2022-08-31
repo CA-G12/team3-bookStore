@@ -1,6 +1,8 @@
-const addUserQueries = require("./addUser");
-const getCartQueries = require("./getCart");
-const checkLogin = require("./loginQuery");
+const addUserQueries = require('./addUser')
+const getCartQueries = require('./getCart')
+const checkLogin = require('./loginQuery')
+const addBooks = require('./addBooks');
+
 const getAllBooksQuery = require("./getAllBooksQuery");
 const addToCartQuery = require("./addToCartQuery");
 const deleteCartItemQuery = require("./deleteCartItemQuery");
@@ -12,4 +14,5 @@ module.exports = {
   getAllBooksQuery,
   addToCartQuery,
   deleteCartItemQuery,
+  addBooks
 };
