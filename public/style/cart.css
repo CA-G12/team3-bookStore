@@ -1,0 +1,73 @@
+
+.cart-section{
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+table{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+}
+tbody{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    width: 97%;
+}
+th{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+tr{
+    width: 100%;
+    display: flex;
+    background-color: var(--navColor);
+}
+td{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--secColor);
+    height: 7rem;
+    justify-content: center;
+    width: 100%;
+}
+input{
+    width: 2rem;
+}
+td img{
+    width: 5rem;
+    height: 5rem;
+}
+.buy-total{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 15rem;
+    align-items: flex-start;
+    height: 5rem;
+    justify-content: space-around;
+}
+.total-price{
+    display: flex;
+    align-items: center;
+}
+.buy-button{
+    width: 70%;
+    padding: .3rem;
+    background-color: var(--secColor);
+    cursor: pointer;
+    /* outline: none; */
+    /* border: none; */
+}
