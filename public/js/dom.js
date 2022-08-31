@@ -34,3 +34,44 @@ addCart.forEach((btn) => {
       });
   });
 });
+fetch("/getAllBooks")
+  .then((data) => data.json())
+  .then((data) => generateBooksCards(data.rows));
+
+function generateBooksCards(data) {
+  let container = document.querySelector(".book-container");
+  container.textContent = "";
+  data.forEach((ele) => {
+    let book = creatNode("div", "book");
+    let bookpic = creatNode("div", "bookpic");
+    bookpic.style.backgroundImage = `url(${ele.imgurl})`;
+    let bookinfo = creatNode("div", "bookinfo");
+    let title = creatNode("div", "title");
+    title.textContent = ele.book_name;
+    let price = creatNode("div", "price");
+    price.textContent = ele.price + "$";
+    let desc = creatNode("div", "desc");
+    desc.textContent = "edveesvedvveveevev dfdwwdfwdfw wsfwfwf scwcwv";
+    let btn = creatNode("a", "add-cart");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("add");
+    });
+    btn.innerHTML = `
+    <i class="fa-solid fa-cart-arrow-down"></i> Add To Cart
+    `;
+    book.appendChild(bookpic);
+    bookinfo.appendChild(title);
+    bookinfo.appendChild(price);
+    bookinfo.appendChild(desc);
+    bookinfo.appendChild(btn);
+    book.appendChild(bookinfo);
+    container.appendChild(book);
+  });
+}
+
+function creatNode(type, className) {
+  let node = document.createElement(type);
+  node.className = className;
+  return node;
+}
