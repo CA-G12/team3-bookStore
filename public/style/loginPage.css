@@ -132,3 +132,11 @@ body{
   .btn:focus {
     outline-width: 0;
   }
+  .spanText{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fca311; 
+  }
