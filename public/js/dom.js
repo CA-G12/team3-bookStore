@@ -55,7 +55,21 @@ function generateBooksCards(data) {
     let btn = creatNode("a", "add-cart");
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      alert("add");
+      fetch("/addToCart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          bookId: ele.id,
+        }),
+      })
+        .then((data) => data.json())
+        .then((data) => {
+          if (data.msg) {
+            window.location.href = "../pages/login.html";
+          }
+        });
     });
     btn.innerHTML = `
     <i class="fa-solid fa-cart-arrow-down"></i> Add To Cart

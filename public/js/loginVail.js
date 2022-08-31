@@ -1,7 +1,6 @@
 const btn = document.querySelector('.btn');
 
 const email = document.querySelector('#email')
-console.log(email);
 const passwoed = document.querySelector('#passowrd');
 const msgContainer = document.querySelector('span');
 

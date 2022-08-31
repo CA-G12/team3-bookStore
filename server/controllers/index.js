@@ -5,6 +5,9 @@ const checkLoggedUser = require("./checkLoggedUser");
 const logout = require("./logout");
 const getCartController = require("./getCart");
 const getAllBooks = require("./getAllBooks");
+const addToCart = require("./addToCart");
+const deleteCartItem = require("./deleteCartItem");
+const cartPage = require("./cartPage");
 
 module.exports = {
   hashController,
@@ -13,4 +16,6 @@ module.exports = {
   logout,
   getCartController,
   getAllBooks,
+  addToCart,
+  deleteCartItem,cartPage
 };
