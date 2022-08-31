@@ -13,7 +13,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(var(--secColor),var(--backgroundColor));
+    background-color: var(--backgroundColor);
   }
   
   .login-box {
@@ -72,7 +72,10 @@ html {
     left: 0;
     color: var(--backgroundColor);
   }
-  
+  .sub{
+    width: 100%;
+    text-align: center;
+  }
   .login-box form .submit {
     border-radius: 5px;
     position: relative;
@@ -84,9 +87,10 @@ html {
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.5s;
-    margin-top: 20px;
     letter-spacing: 4px;
     background-color: var(--secColor);
+
+    margin-top: 20px;
   }
   
   .login-box .submit:hover {
@@ -205,4 +209,8 @@ html {
     letter-spacing: 4px;
     cursor: pointer;
 
+  }
+  .home_login a{
+    text-decoration: none;
+    color: var(--secColor);
   }

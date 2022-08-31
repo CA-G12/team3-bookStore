@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100");
+body{
+  padding-top: 90px;
+}
 .container {
     width: 390px;
     height: 500px;
@@ -116,7 +119,7 @@
   
   .signupBtn{
     position: absolute;
-    bottom: 100px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
