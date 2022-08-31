@@ -10,10 +10,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/cart.css">
+    <link rel="stylesheet" href="../style/index.css">
     <title>cart</title>
 </head>
 
 <body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../index.html">Bookstore</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li id="signup"><a href="./pages/signup.html">SignUp</a></li>
+                    <li id="login"><a href="./pages/login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <section class="cart-section">
         <table>
             <tr>
@@ -21,58 +35,16 @@
                 <th>price</th>
                 <th>Quantity</th>
                 <th>subtotal</th>
+                <th>Delete</th>
             </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS6B-aMyZFqxEukOOaTmykcC0OnaWlDyl-tA&usqp=CAU"
-                        alt="">
-                    <h1>qouran</h1>
-                </td>
-                <td>1000$</td>
-                <td><input type="number" min='0' /></td>
-                <td>1000$</td>
-            </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS6B-aMyZFqxEukOOaTmykcC0OnaWlDyl-tA&usqp=CAU"
-                        alt="">
-                    <h1>qouran</h1>
-                </td>
-                <td>1000$</td>
-                <td><input type="number" min='0' /></td>
-                <td>1000$</td>
-            </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS6B-aMyZFqxEukOOaTmykcC0OnaWlDyl-tA&usqp=CAU"
-                        alt="">
-                    <h1>qouran</h1>
-                </td>
-                <td>1000$</td>
-                <td><input type="number" min='0' /></td>
-                <td>1000$</td>
-            </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS6B-aMyZFqxEukOOaTmykcC0OnaWlDyl-tA&usqp=CAU"
-                        alt="">
-                    <h1>qouran</h1>
-                </td>
-                <td>1000$</td>
-                <td><input type="number" min='0' /></td>
-                <td>1000$</td>
-            </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS6B-aMyZFqxEukOOaTmykcC0OnaWlDyl-tA&usqp=CAU"
-                        alt="">
-                    <h1>qouran</h1>
-                </td>
-                <td>1000$</td>
-                <td><input type="number" min='0' /></td>
-                <td>1000$</td>
-            </tr>   
         </table>
 
-        <div class="buy-total" >
-            <div class="total-price"><h1>total price</h1>: <span>1000$</span> </div>
-            <button class="buy-button" >buy</button>
-            
+        <div class="buy-total">
+            <div class="total-price">
+                <h1>total price</h1>: <span>1000$</span>
+            </div>
+            <button class="buy-button">buy</button>
+
         </div>
     </section>
     <script src="../js/cart.js"></script>

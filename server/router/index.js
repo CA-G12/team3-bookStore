@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { join } = require("path");
 const {
   hashController,
   verifyLogin,
@@ -6,8 +7,13 @@ const {
   logout,
   getCartController,
   addBooksFromForm,
-  addBooksRouter
+  addBooksRouter,
+  getAllBooks,
+  addToCart,
+  deleteCartItem,
+  cartPage,
 } = require("../controllers");
+const isLogged = require("../middlewares/isLogged");
 
 router.get("/checkLoggedUser", checkLoggedUser);
 router.get("/logout", logout);
@@ -16,4 +22,12 @@ router.post("/login", verifyLogin);
 router.post("/addBooks",addBooksFromForm);
 router.get("/addBooks",addBooksRouter);
 
+// router.post("/loginPage", (req, res) => {
+//   res.sendFile(join(__dirname, "..", "..", "public", "pages", "login.html"));
+// });
+router.post("/addToCart", addToCart);
+router.get("/cart", getCartController);
+router.get("/cartPage", isLogged, cartPage);
+router.get("/getAllBooks", getAllBooks);
+router.get("/deleteCartItem/:id", deleteCartItem);
 module.exports = router;
