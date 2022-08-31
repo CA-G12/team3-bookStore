@@ -215,30 +215,6 @@
     </footer>
     <a href="./pages/login.html">login</a>
     <a href="./pages/signup.html">link</a>
-    <script>
-        let arrow = document.querySelector('.down');
-        arrow.addEventListener('click', (e) => {
-            window.scrollTo(0, 550);
-        })
-        fetch('/userIsLogged')
-            .then(data => data.json())
-            .then(changeHeader);
-        function changeHeader(data) {
-            if (!data.msg) {
-                let headerMenu = document.querySelector('.menu ul');
-                headerMenu.textContent = '';
-                headerMenu.innerHTML = `
-                <div class="userInfo">
-                    <a href="/logout" id="logout">Logout</a></li>
-                    <div class="user">
-                        <div id="username">${data.username}</div>
-                    <div id="userImg"><img src="${data.imgurl}" alt=""></div>
-                    </div>
-                </div>
-                `
-            }
-        }
-    </script>
 </body>
 <script src="./js/dom.js"></script>
 
