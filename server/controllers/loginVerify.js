@@ -23,7 +23,6 @@ const verifyLogin = (req, res) => {
       const user = data.rows[0];
       bcrypt.compare(inputPassword, user.password, (err, result) => {
         if (err) {
-          console.log(err);
           res.send( { msg : 500 });
         } else {
           if (!result) {
@@ -35,7 +34,6 @@ const verifyLogin = (req, res) => {
               { algorithm: "HS256" },
               (err, encoded) => {
                 if (err) {
-                  console.log(err);
                   res.send( { msg : 500 });
                 } else {
                   res.cookie("loggedUser", encoded).send({sucss: "success"});
