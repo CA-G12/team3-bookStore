@@ -1,0 +1,1 @@
+fetch('/cart/:1').then(data => data.json()).then(result => console.log(result))

@@ -4,11 +4,13 @@ const {
   verifyLogin,
   checkLoggedUser,
   logout,
+  getCartController,
 } = require("../controllers");
 
 router.get("/checkLoggedUser", checkLoggedUser);
 router.get("/logout", logout);
 router.post("/addUser", hashController);
 router.post("/login", verifyLogin);
+router.get('/cart/:id',getCartController)
 
 module.exports = router;
