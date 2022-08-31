@@ -432,7 +432,7 @@ section.book-container{
     margin-bottom: 5%;
     color: #5a5a5a;
 }
-.bookinfo .author{
+.bookinfo .price{
     font-size: 1.03rem;
     color: #ececec;
     color:#8a8a8a;
@@ -495,4 +495,9 @@ border-radius: 50%;
     right: 10px;
     font-size: 15px;
     color: var(--secColor);
+}
+.desc{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #5a5a5a;
 }
