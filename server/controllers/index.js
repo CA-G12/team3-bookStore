@@ -4,4 +4,6 @@ const hashController = require("./hashPassword");
 const checkLoggedUser = require("./checkLoggedUser");
 const logout = require("./logout");
 const getCartController = require('./getCart')
-module.exports = { hashController, verifyLogin, checkLoggedUser, logout,getCartController };
+const addBooksFromForm = require("./addBooksCo")
+const addBooksRouter = require("./addBooksRouter");
+module.exports = { hashController, verifyLogin, checkLoggedUser, logout,getCartController,addBooksFromForm,addBooksRouter};

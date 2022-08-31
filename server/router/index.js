@@ -5,12 +5,15 @@ const {
   checkLoggedUser,
   logout,
   getCartController,
+  addBooksFromForm,
+  addBooksRouter
 } = require("../controllers");
 
 router.get("/checkLoggedUser", checkLoggedUser);
 router.get("/logout", logout);
 router.post("/addUser", hashController);
 router.post("/login", verifyLogin);
-router.get('/cart',getCartController)
+router.post("/addBooks",addBooksFromForm);
+router.get("/addBooks",addBooksRouter);
 
 module.exports = router;
