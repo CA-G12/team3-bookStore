@@ -9,17 +9,52 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/loginPage.css">
     <title>login</title>
 </head>
 
 <body>
+    <header></header>
     <form method="post" action="/login">
-        <label>Email  <input type="email" name="email"> </label>
-        <label>password  <input type="password" name="password"> </label>
-        <button>SUBMIT</button>
+       
+        <div class="container">
+            <div class="header">
+                Log In
+            </div>
+            <div class="info">
+                *Click on the input boxes
+            </div>
+
+        <input type="email" name="email" class="text" onfocus="handle2()" class="inc2" placeholder="Email">
+        <input type="password" name="password" class="pass" onfocus="handle1()" class="inc1" placeholder="Password">
+            <button class="btn">Log In</button>
+        <svg
+          width="390"
+          height="549"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <rect
+            id="rect"
+            class="rect1"
+            x="45px"
+            y="300px"
+            rx="27"
+            ry="27"
+            width="300px"
+            height="50px"
+            style="stroke: #fca311; stroke-width: 1px; fill: #e5e5e5"
+          />
+        </svg>
+        
+        </div>
+        
     </form>
+    <a href="../pages/signup.html" class="signupBtn btn"><label style="color: black;">Dont Have Account? </label>sign up</a>
+    
     <script src="../js/clientSideValidation.js"></script>
     <script src="../js/dom.js"></script>
+    <script src="../js/loginPage.js"></script>
 </body>
 
 </html>
