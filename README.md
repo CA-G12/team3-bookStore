@@ -1,7 +1,7 @@
 
 
 ## **Live Website**
-You can check the website here [**LIVE LINK**](https://books-shope.herokuapp.com/).
+You can check the website here [**LIVE LINK**](https://team3bookstore.herokuapp.com/).
 
 
 ## **About Our Website** <span id="about"></span>
