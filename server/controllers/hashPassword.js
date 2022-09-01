@@ -7,9 +7,9 @@ const hashController = (req, res) => {
     if(validValue.error){
         res.send({msg:validValue.error.message})
     }else{
-        const { email, password, username, imgurl, usertype } = req.body;
+        const { email, password, username, imgurl} = req.body;
       bcrypt.hash(password, 10, function (err, hash) {
-        addUserQueries({ email, hash, username, imgurl, usertype }).then((data) => {
+        addUserQueries({ email, hash, username, imgurl }).then((data) => {
           res.send({succes:'success'});
         });
       });

@@ -51,7 +51,7 @@ function generateBooksCards(data) {
     let price = creatNode("div", "price");
     price.textContent = ele.price + "$";
     let desc = creatNode("div", "desc");
-    desc.textContent = "edveesvedvveveevev dfdwwdfwdfw wsfwfwf scwcwv";
+    desc.textContent = ele.details;
     let btn = creatNode("a", "add-cart");
     btn.addEventListener("click", (e) => {
       e.preventDefault();

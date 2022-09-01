@@ -1,6 +1,8 @@
 const table = document.querySelector("tbody");
+const span = document.querySelector('span')
 const cartTable = (data) => {
   if (data.length != 0) {
+    let totalPrice = 0
     data.forEach((element) => {
       const tr = document.createElement("tr");
       table.appendChild(tr);
@@ -30,7 +32,13 @@ const cartTable = (data) => {
       let newTd = document.createElement("td");
       newTd.appendChild(btn);
       tr.appendChild(newTd);
+      totalPrice += element.price
+      input.onchange = ()=>{
+        fourTd.textContent = input.value * element.price
+        span.textContent = totalPrice +( input.value * element.price) -50
+      }
     });
+    span.textContent = totalPrice
   } else {
     const p = document.createElement("p");
     p.textContent = " there is no any cart";

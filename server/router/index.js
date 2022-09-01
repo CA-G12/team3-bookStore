@@ -21,10 +21,6 @@ router.post("/addUser", hashController);
 router.post("/login", verifyLogin);
 router.post("/addBooks",addBooksFromForm);
 router.get("/addBooks",addBooksRouter);
-
-// router.post("/loginPage", (req, res) => {
-//   res.sendFile(join(__dirname, "..", "..", "public", "pages", "login.html"));
-// });
 router.post("/addToCart", addToCart);
 router.get("/cart", getCartController);
 router.get("/cartPage", isLogged, cartPage);

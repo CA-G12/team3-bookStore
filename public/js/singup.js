@@ -1,7 +1,6 @@
 let userName = document.querySelector("#username");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
-let userType = document.querySelector("#userType");
 let imgurl = document.querySelector("#image");
 let error_span = document.querySelector(".error-span");
 let  submit = document.querySelector(".submit");
@@ -21,7 +20,6 @@ form.addEventListener("submit", (e) => {
       username: userName.value,
       email: email.value,
       password: password.value,
-      usertype: userType.value,
       imgurl: imgurl.value,
     }),
   })
