@@ -55,7 +55,7 @@ The team agreed on guidelines to follow during development. The technologies and
 - Heroku
 
 # **Team members** 
-1. Mohammed Moahmmed Alagha 
+1. Moahmmed Alagha 
 2. Nagham Abuwarda
 3. Nader shak-shak
 4. Husam Kamal
